@@ -28,4 +28,10 @@ public class OrderDAO {
 
         return order;
     }
+
+    public List<Order> getOrders() {
+
+        List<?> list = hibernateTemplate.find("FROM Order");
+        return (List<Order>) list;
+    }
 }

@@ -16,10 +16,12 @@
         <th>Номер книги</th>
         <th>Номер брони</th>
     </tr>
+    <c:forEach items="${orders}" var="order">
         <tr>
-            <td>12</td>
-            <td>2</td>
+            <td>${order.bookId}</td>
+            <td>${order.orderId}</td>
         </tr>
+    </c:forEach>
 </table>
 </body>
 </html>

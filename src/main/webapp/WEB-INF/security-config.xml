@@ -11,6 +11,7 @@
 		<intercept-url  pattern="/addBook" access="hasRole('ROLE_ADMIN')" />
 		<intercept-url  pattern="/addBookProcess" access="hasRole('ROLE_ADMIN')" />
 		<intercept-url  pattern="/deleteBook" access="hasRole('ROLE_ADMIN')" />
+		<intercept-url  pattern="/bookedBooks" access="hasRole('ROLE_ADMIN')" />
 		<form-login
 		   login-page="/login.jsp"
 		   login-processing-url="/appLogin"

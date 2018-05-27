@@ -93,6 +93,13 @@ public class MainController {
         return "/view/order2";
     }
 
+    @RequestMapping("/bookedBooks")
+    public String getOrders(ModelMap model) {
+
+        model.addAttribute("orders", orderDAO.getOrders());
+        return "/view/bookedBooks";
+    }
+
     @RequestMapping(value="/error")
     public String error() {
         return "/view/error";
