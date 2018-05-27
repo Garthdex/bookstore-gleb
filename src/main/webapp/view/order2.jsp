@@ -16,13 +16,19 @@
     <br><br><br><br><br><br>
 </form>
 
+
 <sec:authorize access="hasRole('ROLE_ADMIN')">
     <form action="<%=request.getContextPath()%>/addBook">
         <button type="submit">Добавить книгу</button>
     </form>
 </sec:authorize>
+
+          <a class="btn btn-default" href="<%=request.getContextPath()%>/bookedBooks">Забронированные книги</a>
+
+
 <table border="1" width="100%" cellpadding="5">
     <tr>
+        <th>Номер</th>
         <th>Название</th>
         <th>Автор</th>
         <th>Где находится</th>
@@ -30,6 +36,7 @@
     </tr>
     <c:forEach items="${books}" var="book">
         <tr>
+            <td>1</td>
             <td><form action="<%=request.getContextPath()%>/booking" method="post">
                 <input type="hidden" name="book_id" value="${book.bookId}">
                 <button type="submit">${book.bookName}</button>

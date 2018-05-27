@@ -2,7 +2,7 @@
 <header>
     <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/main.css" type="text/css"/>
     <div class="header-bg">
-        <img src="<%=request.getContextPath()%>/resources/img/head.png" width="1583" height="220">
+        <img src="<%=request.getContextPath()%>/resources/img/head.png" width="1762" height="220">
     </div>
 
 
