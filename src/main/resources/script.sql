@@ -14,12 +14,12 @@ INSERT INTO `bookstore`.`users` (`user_id`, `username`, `password`, `role`) VALU
 CREATE TABLE IF NOT EXISTS `books` (
   `book_id` mediumint NOT NULL AUTO_INCREMENT,
   `book_name` varchar(100),
-  `bookAuthor` varchar(100),
+  `book_author` varchar(100),
   `book_storage` varchar(100),
   PRIMARY KEY (`book_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-INSERT INTO `bookstore`.`books` (`book_id`, `book_name`, `bookAuthor`, `book_storage`) VALUES ('1', 'Книга №1', 'Автор №1', 'Детская библиотека №2');
-INSERT INTO `bookstore`.`books` (`book_id`, `book_name`, `bookAuthor`, `book_storage`) VALUES ('2', 'Книга №2', 'Автор №2', 'Детская библиотека №5');
+INSERT INTO `bookstore`.`books` (`book_id`, `book_name`, `book_author`, `book_storage`) VALUES ('1', 'Книга №1', 'Автор №1', 'Детская библиотека №2');
+INSERT INTO `bookstore`.`books` (`book_id`, `book_name`, `book_author`, `book_storage`) VALUES ('2', 'Книга №2', 'Автор №2', 'Детская библиотека №5');
 
 CREATE TABLE IF NOT EXISTS `orders` (
   `order_id` mediumint NOT NULL AUTO_INCREMENT,
