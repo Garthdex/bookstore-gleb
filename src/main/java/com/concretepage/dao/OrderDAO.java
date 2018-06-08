@@ -29,9 +29,24 @@ public class OrderDAO {
         return order;
     }
 
+    public Order getOrderByOrderId(Integer orderId) {
+        Order order = new Order();
+        List<?> list = hibernateTemplate.find("FROM Order WHERE orderId=?", orderId);
+
+        if (!list.isEmpty()) {
+            order = (Order) list.get(0);
+        }
+
+        return order;
+    }
+
     public List<Order> getOrders() {
 
         List<?> list = hibernateTemplate.find("FROM Order");
         return (List<Order>) list;
+    }
+
+    public void deleteOrder(Integer orderId) {
+        hibernateTemplate.delete(getOrderByOrderId(orderId));
     }
 }

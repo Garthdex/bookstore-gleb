@@ -15,11 +15,18 @@
     <tr>
         <th>Номер книги</th>
         <th>Номер брони</th>
+        <th>Удаление брони</th>
     </tr>
     <c:forEach items="${orders}" var="order">
         <tr>
             <td>${order.bookId}</td>
             <td>${order.orderId}</td>
+            <td>
+                <form action="<%=request.getContextPath()%>/deleteOrder" method="post">
+                    <input type="hidden" name="order_id" value="${order.orderId}">
+                    <button type="submit">Удалить заказ</button>
+                </form>
+            </td>
         </tr>
     </c:forEach>
 </table>

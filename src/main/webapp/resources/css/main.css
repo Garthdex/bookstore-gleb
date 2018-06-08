@@ -16,7 +16,8 @@ color:rgb(0, 80, 10);
 }
 
 .button2 {
-  position:absolute;
+
+left: 9px;  position:absolute;
   bottom:620px;
   background: yellow;
   width: 438px;

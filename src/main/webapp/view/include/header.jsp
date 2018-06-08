@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/bootstrap/css/bootstrap.css" type="text/css"/>
     <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/bootstrap/css/bootstrap-theme.css" type="text/css"/>
     <div class="header-bg">
-        <img src="<%=request.getContextPath()%>/resources/img/head.png" width="1762" height="220">
+        <img src="<%=request.getContextPath()%>/resources/img/head.png" width="1777" height="230">
     </div>
 
 

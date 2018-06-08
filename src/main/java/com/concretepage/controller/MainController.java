@@ -100,6 +100,13 @@ public class MainController {
         return "/view/bookedBooks";
     }
 
+    @RequestMapping("/deleteOrder")
+    public String deleteOrder(ModelMap model, @RequestParam("order_id") Integer orderId) {
+        orderDAO.deleteOrder(orderId);
+        model.addAttribute("orders", orderDAO.getOrders());
+        return "/view/bookedBooks";
+    }
+
     @RequestMapping(value="/error")
     public String error() {
         return "/view/error";
